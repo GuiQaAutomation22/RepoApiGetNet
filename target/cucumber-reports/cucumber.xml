@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="5.842">
+<testcase classname="Create a new user" name="Successfully create a new user" time="3.631">
+<system-out><![CDATA[Given a user with name "morpheus" and job "leader"..........................passed
+When I send a request to create the user....................................passed
+Then the user is created successfully.......................................passed
+And the response contains name "morpheus" and job "leader"..................passed
+And the status code is 201..................................................passed
+And the response contains the mandatory fields..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a new user" name="Create a user without a name" time="0.626">
+<system-out><![CDATA[Given a user with name "" and job "leader"..................................passed
+When I send a request to create the user....................................passed
+Then the status code is 201.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a new user" name="Create a user without a job" time="0.581">
+<system-out><![CDATA[Given a user with name "morpheus" and job ""................................passed
+When I send a request to create the user....................................passed
+Then the status code is 201.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a new user" name="Verify response structure" time="0.603">
+<system-out><![CDATA[Given a user with name "morpheus" and job "leader"..........................passed
+When I send a request to create the user....................................passed
+Then the response contains the mandatory fields.............................passed
+]]></system-out>
+</testcase>
+</testsuite>
